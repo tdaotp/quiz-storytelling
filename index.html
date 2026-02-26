@@ -1,56 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Storytelling Quiz</title>
-</head>
-<body>
-    <h1>Welcome to the Interactive Storytelling Quiz!</h1>
-    <form id="quiz-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <label for="first-name">First Name:</label><br>
-        <input type="text" id="first-name" name="first-name" required><br><br>
-
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-
-        <p>Question 1: What is your favorite color?</p>
-        <input type="radio" id="color-red" name="color" value="red" required>
-        <label for="color-red">Red</label><br>
-        <input type="radio" id="color-blue" name="color" value="blue">
-        <label for="color-blue">Blue</label><br>
-
-        <p>Question 2: Choose an animal:</p>
-        <input type="radio" id="animal-dog" name="animal" value="dog" required>
-        <label for="animal-dog">Dog</label><br>
-        <input type="radio" id="animal-cat" name="animal" value="cat">
-        <label for="animal-cat">Cat</label><br>
-
-        <p>Question 3: What time of day do you prefer?</p>
-        <input type="radio" id="time-morning" name="time" value="morning" required>
-        <label for="time-morning">Morning</label><br>
-        <input type="radio" id="time-evening" name="time" value="evening">
-        <label for="time-evening">Evening</label><br>
-
-        <!-- Add 9 more questions here in the same format -->
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <script>
-        document.getElementById('quiz-form').onsubmit = function(event) {
-            event.preventDefault(); // Prevent default form submission
-            const form = event.target;
-            let score = 0;
-
-            // Example score calculation
-            if(form.color.value === 'blue') score += 1;
-            if(form.animal.value === 'cat') score += 1;
-            // Continue scoring logic for 12 questions...
-
-            alert('Your score is: ' + score);
-            form.submit(); // Submit the form if needed for Formspree
-        };
-    </script>
-</body>
-</html>
+<form>
+    <label for="nom">Nom:</label>
+    <input type="text" id="nom" name="nom" required>
+    <label for="prenom">Prénom:</label>
+    <input type="text" id="prenom" name="prenom" required>
+    <input type="submit" value="Submit">
+</form>
