@@ -1,7 +1,35 @@
-<form>
-    <label for="nom">Nom:</label>
-    <input type="text" id="nom" name="nom" required>
-    <label for="prenom">Prénom:</label>
-    <input type="text" id="prenom" name="prenom" required>
-    <input type="submit" value="Submit">
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Storytelling</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Quiz Storytelling</h1>
+    <form id="quiz-form">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <button type="submit">Start Quiz</button>
+    </form>
+
+    <div id="quiz-container" style="display:none;">
+        <h2>Quiz Questions</h2>
+        <!-- Quiz questions will be injected here -->
+        <div id="questions"></div>
+        <button id="submit-quiz">Submit Quiz</button>
+    </div>
+
+    <div id="results-section" style="display:none;">
+        <h2>Your Results</h2>
+        <div id="results"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
