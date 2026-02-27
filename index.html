@@ -1,33 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Storytelling</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Quiz Storytelling - Lead Magnet</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Quiz Storytelling</h1>
-    <form id="quiz-form">
-        <label for="firstName">First Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
-        <br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <br>
-        <button type="submit">Start Quiz</button>
-    </form>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 Quiz Storytelling</h1>
+            <p>Découvrez votre niveau en storytelling et recevez des recommandations personnalisées !</p>
+        </div>
 
-    <div id="quiz-container" style="display:none;">
-        <h2>Quiz Questions</h2>
-        <!-- Quiz questions will be injected here -->
-        <div id="questions"></div>
-        <button id="submit-quiz">Submit Quiz</button>
-    </div>
+        <!-- FORM SECTION FOR CONTACT INFO -->
+        <div id="form-section" class="form-section">
+            <h2>Avant de commencer, laissez-nous vos coordonnées</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                </div>
 
-    <div id="results-section" style="display:none;">
-        <h2>Your Results</h2>
-        <div id="results"></div>
+                <div class="form-group">
+                    <label for="prenom">Prénom *</label>
+                    <input type="text" id="prenom" name="prenom" required placeholder="Votre prénom">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required placeholder="votre.email@exemple.com">
+                </div>
+
+                <button type="button" onclick="startQuiz()" class="btn-start">Commencer le quiz</button>
+            </form>
+        </div>
+
+        <!-- QUIZ SECTION -->
+        <div id="quiz-section" class="quiz-section" style="display: none;">
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+            <div id="progress-text" class="progress-text"></div>
+
+            <div id="quiz-container" class="quiz-container">
+                <!-- Quiz questions will be loaded here -->
+            </div>
+        </div>
+
+        <!-- RESULTS SECTION -->
+        <div id="results-section" class="results-section" style="display: none;">
+            <h2>📊 Vos résultats</h2>
+            <div id="results-content">
+                <!-- Results will be displayed here -->
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
